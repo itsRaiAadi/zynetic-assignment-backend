@@ -1,0 +1,63 @@
+{
+  "info": {
+    "_postman_id": "930e3ea2-97f6-4ba4-8dc2-1aaf902b9d50",
+    "name": "Zynetic-apis",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47479966"
+  },
+  "item": [
+    {
+      "name": "Ingest API",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"type\": \"vehicle\",\r\n  \"vehicleId\": \"EV-2001\",\r\n  \"soc\": 80,\r\n  \"kwhDeliveredDc\": 11.5,\r\n  \"batteryTemp\": 33,\r\n  \"timestamp\": \"2026-02-08T10:01:00Z\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://zynetic-assignment-backend.onrender.com/v1/ingest",
+          "protocol": "https",
+          "host": [
+            "zynetic-assignment-backend",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "v1",
+            "ingest"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://zynetic-assignment-backend.onrender.com/v1/analytics/performance/EV-2001",
+          "protocol": "https",
+          "host": [
+            "zynetic-assignment-backend",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "v1",
+            "analytics",
+            "performance",
+            "EV-2001"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
